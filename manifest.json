@@ -1,16 +1,18 @@
 {
     "manifest_version": 3,
     "name": "Zip Speech",
-    "version": "1.0",
+    "version": "2.0",
     "description": "Giving a voice to those without, in Google Meet.",
     "icons": {
         "128": "icon.png"
     },
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "storage"
     ],
     "host_permissions": [
-        "https://translate.google.com/*"
+        "https://translate.google.com/*",
+        "https://meet.google.com/*"
     ],
     "background": {
         "service_worker": "background.js"
@@ -40,7 +42,8 @@
     "web_accessible_resources": [
         {
             "resources": [
-                "content-main.js"
+                "content-main.js",
+                "icon.png"
             ],
             "matches": [
                 "https://meet.google.com/*"
